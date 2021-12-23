@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Josefin+Sans&display=swap");
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 1rem 0;
+}
+
+*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1.5rem;
+}
+h6 {
+  font-size: 1.25rem;
+}
+
+a.link {
+  color: #4797ff;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+a.link:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #4797ff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+a.link:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+input {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  background-color: #eee;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+
+  transition: all 0.25s ease-out;
+}
+input:placeholder-shown {
+  font-style: italic;
+}
+input:hover {
+  border-color: #d4d4d4;
+}
+input:focus {
+  outline: none;
+  border-color: #c4c4c4;
+}
+
+button,
+input[type="submit"],
+input[type="button"] {
+  border: none;
+  background: linear-gradient(to right, #0093e9, #4797ff);
+  color: #fff;
+  cursor: pointer;
+
+  transition: all 0.25s ease-out;
+}
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  opacity: 0.9;
+}
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active {
+  opacity: 0.8;
+}
